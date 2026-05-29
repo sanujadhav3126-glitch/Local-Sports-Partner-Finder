@@ -1,0 +1,2 @@
+import { Link, useNavigate } from 'react-router-dom';
+export default function Navbar(){ const nav=useNavigate(); const logout=()=>{localStorage.clear(); nav('/login')}; return <nav className="nav"><Link className="logo" to="/">GamePartner</Link><div><Link to="/dashboard">Dashboard</Link><Link to="/profile">Profile</Link><Link to="/search">Find Players</Link><Link to="/requests">Requests</Link><Link to="/admin">Admin</Link>{localStorage.getItem('token')?<button onClick={logout}>Logout</button>:<Link to="/login">Login</Link>}</div></nav> }

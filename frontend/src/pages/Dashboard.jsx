@@ -1,0 +1,2 @@
+import { Link } from 'react-router-dom';
+export default function Dashboard(){ const user=JSON.parse(localStorage.getItem('user')||'{}'); return <div className="container"><h1>Welcome, {user.name}</h1><div className="grid"><Link className="dash" to="/profile">Manage Profile</Link><Link className="dash" to="/search">Search Nearby Players</Link><Link className="dash" to="/requests">Play Requests</Link><Link className="dash" to="/admin">Admin Dashboard</Link></div></div> }
